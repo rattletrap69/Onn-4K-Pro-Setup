@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onn 4K Pro Master Setup Blueprint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                    colors: {
+                        darkbg: '#121214',
+                        cardbg: '#1a1a1e',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { background-color: #121214; color: #e4e4e7; }
+        .code-style { background-color: #27272a; padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-family: monospace; font-size: 0.9em; color: #f4f4f5; }
+    </style>
+</head>
+<body class="antialiased p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center border-b border-zinc-800 pb-8 mb-10">
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Onn 4K Pro Master Blueprint</h1>
+            <p class="text-zinc-400 text-lg">The Step-by-Step Guide for David & Chris's Low-Maintenance Setup</p>
+            <div class="inline-block mt-4 px-4 py-1.5 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold border border-blue-500/30">
+                Architecture Strategy: Hybrid (Separated Engine)
+            </div>
+        </header>
+
+        <div class="bg-emerald-500/10 border-l-4 border-emerald-500 p-6 rounded-r-xl mb-10">
+            <h3 class="text-xl font-bold text-emerald-400 mb-2">Verification: Why This Layout Wins</h3>
+            <p class="text-zinc-300">Forcing an entire live TV playlist into Kodi creates a massive performance lag. Keeping <strong class="text-white">TiviMate</strong> completely separate guarantees your live TV operates smoothly every day. The Onn 4K Pro's upgraded 3GB of RAM provides more than enough headroom to toggle instantly between VOD and Live TV using the remote control shortcut keys.</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white border-l-4 border-blue-500 pl-4 mt-12 mb-6">Phase 1: Hardware & External Storage Expansion (DVR Setup)</h2>
+        <div class="bg-cardbg border border-zinc-800 rounded-xl p-6 shadow-xl mb-8">
+            <p class="mb-4">The Onn 4K Pro features a native <strong>USB 3.0 Port</strong>. To format a high-capacity USB Flash Drive or External Hard Drive to work smoothly as a storage location for TiviMate DVR records, complete the following steps:</p>
+            
+            <h3 class="text-lg font-semibold text-white mt-6 mb-2">Step 1: Prep the System & Mount</h3>
+            <ul class="list-disc list-inside space-y-2 text-zinc-300 ml-2">
+                <li>Insert your external drive or USB stick directly into the back port of your Onn 4K Pro.</li>
+                <li>Go to <span class="code-style">Settings</span> > <span class="code-style">System</span> > <span class="code-style">Developer options</span>. Ensure that <strong>USB Debugging is turned OFF</strong>. If left on, the system will not read the external drive files correctly.</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-2">Step 2: Storage Configuration Choice</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                <div class="bg-zinc-900/80 p-4 rounded-lg border border-zinc-800">
+                    <strong class="text-blue-400 block mb-1">Option A: Removable Storage (Recommended)</strong>
+                    <span class="text-sm text-zinc-400">Keep the drive formatted as FAT32 or exFAT. This keeps your files readable by computers and makes backups easy.</span>
+                </div>
+                <div class="bg-zinc-900/80 p-4 rounded-lg border border-zinc-800">
+                    <strong class="text-zinc-300 block mb-1">Option B: Adopted Device Storage</strong>
+                    <span class="text-sm text-zinc-400">Go to Storage settings and choose "Format as device storage". This merges the drive space completely into the internal system memory.</span>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-amber-500/10 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                <strong class="text-amber-500 block mb-1">Crucial Android TV 12 Scoped Storage Bypass:</strong>
+                <span class="text-sm text-zinc-300">Android TV heavily limits write access to external drives. To ensure TiviMate actually saves your recorded files, install the <strong>X-plore File Manager</strong> app from the Play Store. Use it to navigate to your external storage directory and create a brand-new folder named exactly <span class="code-style">TiviMate</span> (capitalized exactly as shown) inside the root directory.</span>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white border-l-4 border-blue-500 pl-4 mt-12 mb-6">Phase 2: Operating System Optimization</h2>
+        <div class="bg-cardbg border border-zinc-800 rounded-xl p-6 shadow-xl mb-8">
+            <p class="mb-4 text-zinc-300">Strip out background lag and clear corporate ads off the device dashboard before loading your software setup:</p>
+            <ol class="list-decimal list-inside space-y-3 text-zinc-300 ml-2">
+                <li><strong class="text-white">Unlock Developer Access:</strong> Navigate to <span class="code-style">Settings</span> > <span class="code-style">System</span> > <span class="code-style">About</span>. Scroll down to <span class="code-style">Android TV OS Build</span> and hit the center selection button 7 times consecutively.</li>
+                <li><strong class="text-white">Enable Unknown Sources:</strong> Go to <span class="code-style">Settings</span> > <span class="code-style">Apps</span> > <span class="code-style">Security & Restrictions</span> > <span class="code-style">Unknown Sources</span> and grant toggle access to your download utilities.</li>
+                <li><strong class="text-white">Enable Apps-Only Mode:</strong> Navigate to <span class="code-style">Settings</span> > <span class="code-style">Accounts & Sign-In</span> > Select your profile ID > Toggle <strong>Apps-only mode</strong> to ON. This clears out heavy video trailers and menu recommendations.</li>
+                <li><strong class="text-white">0.5x UI Speed Optimization:</strong> Enter your new <span class="code-style">Developer options</span> menu. Locate <em>Window animation scale</em>, <em>Transition animation scale</em>, and <em>Animator duration scale</em>. Drop each setting from 1.0x down to <strong>0.5x</strong>.</li>
+            </ol>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white border-l-4 border-blue-500 pl-4 mt-12 mb-6">Phase 3: The Video-on-Demand (VOD) Engine Setup</h2>
+        <div class="bg-cardbg border border-zinc-800 rounded-xl p-6 shadow-xl mb-8">
+            
+            <!-- NEW TRAKT SECTION -->
+            <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-5 mb-8">
+                <h3 class="text-xl font-bold text-blue-400 mb-2 flex items-center">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    The Brain: Trakt.tv Synchronization (Mandatory)
+                </h3>
+                <p class="text-sm text-zinc-300 mb-4">Trakt is required to sync watch history, build the "Up Next" episode lists, and populate the widgets on the home screen. <strong>Chris does NOT need to give David his password.</strong> Use the API PIN method below during setup.</p>
+            </div>
+
+            <p class="mb-4 text-zinc-300">Choose between <strong>Kodi (with the lightweight Nimbus Skin)</strong> or <strong>Stremio</strong> to handle your movies and TV show libraries:</p>
+            
+            <div class="space-y-8">
+                <!-- Option 1 -->
+                <div class="border border-zinc-700 rounded-lg p-5">
+                    <h3 class="text-lg font-bold text-white mb-3">Option 1: Kodi 21 (Omega) + Nimbus Skin + Trakt</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-zinc-300 text-sm">
+                        <li>Install Kodi 21 Omega from the Google Play Store.</li>
+                        <li>Go to <span class="code-style">Settings (Gear Icon)</span> > <span class="code-style">File Manager</span> > <span class="code-style">Add Source</span>.</li>
+                        <li>Select <span class="code-style">&lt;None&gt;</span> and type: <code class="bg-black px-2 py-1 rounded text-blue-300 border border-zinc-700 ml-2">https://ivarbrandt.github.io/repository.ivarbrandt/</code></li>
+                        <li>Name it <span class="code-style">ivarbrandt</span> and click OK.</li>
+                        <li>Go to <span class="code-style">Add-ons</span> > <span class="code-style">Install from Zip File</span> > <span class="code-style">ivarbrandt</span> and install the zip.</li>
+                        <li>Go to <span class="code-style">Install from Repository</span> > <span class="code-style">ivarbrandt repository</span> > <span class="code-style">Look and Feel</span> > <span class="code-style">Skin</span> > Select <strong>Nimbus</strong> and install. Accept the prompt.</li>
+                        <li><strong>Link TorBox:</strong> Open your video add-on (Fen Light/Umbrella) > Settings > Accounts > Enter your TorBox API Key.</li>
+                        <li class="text-blue-300 font-semibold"><strong>Link Trakt:</strong> In the add-on settings > Accounts > Click "Authorize Trakt". A popup with an 8-digit code will appear on the TV. Have Chris go to <code>trakt.tv/activate</code> on his phone and type in the code.</li>
+                        <li>Configure Nimbus widgets: <span class="code-style">Skin Configuration</span> > <span class="code-style">Main Menu Items</span> > Point paths to your Trakt add-on lists.</li>
+                    </ol>
+                </div>
+
+                <!-- Option 2 -->
+                <div class="border border-zinc-700 rounded-lg p-5">
+                    <h3 class="text-lg font-bold text-white mb-3">Option 2: Stremio Setup (Lighter Alternative)</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-zinc-300 text-sm">
+                        <li>Install the official Stremio client app directly from the Google Play Store.</li>
+                        <li>Create an account and sign in.</li>
+                        <li class="text-blue-300 font-semibold"><strong>Link Trakt:</strong> Go to Stremio <span class="code-style">Settings (Gear Icon)</span> > Scroll down to Trakt > Click <strong>Authenticate</strong>. Chris can approve this via his phone.</li>
+                        <li>On a phone/computer browser, go to the Stremio Add-ons store and configure <strong>Torrentio</strong> or <strong>AIOStreams</strong>.</li>
+                        <li>During add-on setup, select <strong>TorBox</strong> as the Debrid Provider and paste your API Key. Install it.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white border-l-4 border-blue-500 pl-4 mt-12 mb-6">Phase 4: Live TV (TiviMate) Integration & Remote Mapping</h2>
+        <div class="bg-cardbg border border-zinc-800 rounded-xl p-6 shadow-xl mb-12">
+            <p class="mb-4 text-zinc-300">Finalize the build by connecting your live streaming content and linking your physical hardware keys:</p>
+            <ol class="list-decimal list-inside space-y-3 text-zinc-300 ml-2">
+                <li>Install <strong>TiviMate</strong> from the official storefront and activate your premium subscription.</li>
+                <li>Add your custom playlist file string (M3U URL or Xtream Codes credentials).</li>
+                <li><strong class="text-white">Map the DVR Recording Directory:</strong> In TiviMate, navigate to <span class="code-style">Settings</span> > <span class="code-style">Other</span> > <span class="code-style">Recording</span> > <span class="code-style">Recording Folder</span> > <span class="code-style">Select Folder</span>. Navigate to your external storage directory and select the dedicated <span class="code-style">TiviMate</span> folder you built in Phase 1.</li>
+                <li><strong class="text-white">Configure the Magic Remote Shortcut:</strong> Go out to the main device system settings: <span class="code-style">Settings</span> > <span class="code-style">Remotes & Accessories</span> > <span class="code-style">Setup Magic Button</span>. Link the physical <strong>Star (⭐) button</strong> on your Onn remote to instantly launch your VOD app (Kodi or Stremio).</li>
+            </ol>
+        </div>
+
+        <footer class="text-center border-t border-zinc-800 pt-8 pb-12">
+            <p class="text-zinc-500 text-sm font-medium tracking-wide uppercase">Master Guide Build Complete</p>
+            <p class="text-zinc-600 text-xs mt-2">Ready for deployment.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
